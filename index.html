@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title>MENÜ</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .parlayan-baslik {
+            font-size: 32px;
+            font-weight: bold;
+            text-align: center;
+            margin: 30px 0;
+            background: linear-gradient(90deg, #ff9800, #ff5722, #ff9800);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: parilti 2s infinite;
+        }
+
+        @keyframes parilti {
+            0% { opacity: 1; }
+            50% { opacity: 0.5; }
+            100% { opacity: 1; }
+        }
+
+        .merkez {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 20px;
+            padding: 0 20px;
+        }
+
+        .responsive-img {
+            max-width: 100%;
+            width: 450px;
+            height: auto;
+            border: 2px solid #fdfdfd;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        a.pdf-link {
+            margin-top: 20px;
+            padding: 12px 24px;
+            font-size: 20px;
+            font-weight: bold;
+            text-decoration: none;
+            color: white;
+            background-color: #007bff;
+            border-radius: 6px;
+            transition: background-color 0.3s ease;
+        }
+
+        a.pdf-link:hover {
+            background-color: #0056b3;
+        }
+
+        @media (max-width: 768px) {
+            .parlayan-baslik {
+                font-size: 24px;
+            }
+
+            a.pdf-link {
+                font-size: 18px;
+                padding: 10px 20px;
+            }
+
+            .responsive-img {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="parlayan-baslik"> ŞEHİR HATLARI AŞ MENÜ </div>
+
+    <div class="merkez">
+        <img src="resim.png" alt="Menü Görseli" class="responsive-img">
+        <a href="temmuzmenu.pdf" download="temmuzmenu.pdf" class="pdf-link">
+            📄 Menü PDF İndir
+        </a>
+    </div>
+
+</body>
+</html>
